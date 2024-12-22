@@ -1,35 +1,34 @@
 package project.AreaAndVolume.Area;
 import java.util.Scanner;
-
-public class Kite {
+public class Parallelogram {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
     while (true) {
       try {
-        double diagonal1, diagonal2, areaKite;
+        double base, height, areaParallelogram;
         String choice;
-  
-        System.out.println("== LUAS LAYANG-LAYANG ==");
-        System.out.print("Diagonal 1 (Cm): ");
-        diagonal1 = scanner.nextDouble();
-  
-        System.out.print("Diagonal 2 (Cm): ");
-        diagonal2 = scanner.nextDouble();
 
-        if (diagonal1 < 0 || diagonal2 < 0) {
-          System.out.println("Diagonal tidak boleh kurang dari nol!.");
+        System.out.println("== LUAS JAJAR GENJANG ==");
+        System.out.print("Alas (Cm): ");
+        base = scanner.nextDouble();
+  
+        System.out.print("Tinggi (Cm): ");
+        height = scanner.nextDouble();
+
+        if (base < 0 || height < 0) {
+          System.out.println("Alas dan Tinggi tidak boleh kurang dari nol");
           continue;
-        } else if (diagonal1 == 0 || diagonal2 == 0) {
+        } else if (base == 0 || height == 0){
           System.out.println("Bangun datar tidak memiliki area yang terukur!.");
           continue;
         }
-  
-        areaKite = 0.5 * diagonal1 * diagonal2;
-  
-        System.out.println("Luas Layang-Layang: " + areaKite + " Cm²");
 
         scanner.nextLine();
+  
+        areaParallelogram = base * height;
+  
+        System.out.println("Area jajar genjang: " + areaParallelogram + " Cm²");
 
         while (true) {
           System.out.print("Mau lanjut? (y/t): ");
@@ -45,7 +44,8 @@ public class Kite {
           } else {
             System.out.println("Harap masukkan pilihan yang valid!.");
           }
-        } 
+        }
+
       } catch (Exception e) {
         System.out.println("Input tidak valid!.");
         scanner.next();

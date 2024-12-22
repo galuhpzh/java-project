@@ -10,7 +10,7 @@ public class Circle {
         double radius, areaCircle;
         String choice;
   
-        System.out.println("== LUAS BANGUN DATAR LINGKARAN ==");
+        System.out.println("== LUAS LINGKARAN ==");
         System.out.print("Masukkan jari-jari (r² Cm): ");
         radius = scanner.nextDouble();
 

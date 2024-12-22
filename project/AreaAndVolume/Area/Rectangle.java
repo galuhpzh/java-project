@@ -1,33 +1,33 @@
 package project.AreaAndVolume.Area;
 import java.util.Scanner;
 
-public class Kite {
+public class Rectangle {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
     while (true) {
       try {
-        double diagonal1, diagonal2, areaKite;
+        double length, width, areaRectangle;
         String choice;
-  
-        System.out.println("== LUAS LAYANG-LAYANG ==");
-        System.out.print("Diagonal 1 (Cm): ");
-        diagonal1 = scanner.nextDouble();
-  
-        System.out.print("Diagonal 2 (Cm): ");
-        diagonal2 = scanner.nextDouble();
 
-        if (diagonal1 < 0 || diagonal2 < 0) {
-          System.out.println("Diagonal tidak boleh kurang dari nol!.");
+        System.out.println("== LUAS PERSEGI PANJANG ==");
+        System.out.print("Panjang (Cm): ");
+        length = scanner.nextDouble();
+  
+        System.out.print("Lebar (Cm): ");
+        width = scanner.nextDouble();
+
+        if (length < 0 || width < 0) {
+          System.out.println("Panjang dan Lebar tidak boleh kurang dari nol");
           continue;
-        } else if (diagonal1 == 0 || diagonal2 == 0) {
+        } else if (length == 0 || width == 0) {
           System.out.println("Bangun datar tidak memiliki area yang terukur!.");
           continue;
         }
   
-        areaKite = 0.5 * diagonal1 * diagonal2;
+        areaRectangle = length * width;
   
-        System.out.println("Luas Layang-Layang: " + areaKite + " Cm²");
+        System.out.println("Luas persegi panjang: " + areaRectangle + " Cm²");
 
         scanner.nextLine();
 
@@ -36,7 +36,7 @@ public class Kite {
           choice = scanner.nextLine();
 
           if (choice.equalsIgnoreCase("t")) {
-            System.out.println("Program berhenti!.");
+            System.out.println("Program berheti!.");
             scanner.close();
             return;
           } else if (choice.equalsIgnoreCase("y")) {
@@ -45,7 +45,8 @@ public class Kite {
           } else {
             System.out.println("Harap masukkan pilihan yang valid!.");
           }
-        } 
+        }
+  
       } catch (Exception e) {
         System.out.println("Input tidak valid!.");
         scanner.next();
