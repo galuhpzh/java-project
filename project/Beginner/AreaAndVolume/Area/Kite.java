@@ -1,4 +1,4 @@
-package project.AreaAndVolume.Area;
+package project.Beginner.AreaAndVolume.Area;
 import java.util.Scanner;
 
 public class Kite {

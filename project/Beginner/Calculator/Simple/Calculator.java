@@ -1,4 +1,4 @@
-package project.Calculator.Simple;
+package project.Beginner.Calculator.Simple;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 

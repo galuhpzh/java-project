@@ -1,4 +1,4 @@
-package project.Calculator.Advance;
+package project.Beginner.Calculator.Advance;
 
 public class Advance {
   public static void main(String[] args) {
